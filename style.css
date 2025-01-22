@@ -4,7 +4,7 @@
     --color-dark-greyish-blue: hsl(217, 19%, 35%);
     --color-desaturated-dark-blue: hsl(214, 17%, 51%);
     --color-greyish-blue: hsl(212, 23%, 69%);
-    --color-light-greyish-blue: hsl(212, 23%, 69%);
+    --color-light-greyish-blue: hsl(210, 46%, 95%);
 
     --font-family-manrope: "Manrope", serif;
 }
@@ -12,4 +12,99 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    background-color: var(--color-light-greyish-blue);
+}
+main {
+    display: flex;
+    width: 53%;
+    height: 34%;
+    background-color: #fff;
+}
+.back-image {
+    width: 37.5%;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-image: url(./images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-content {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 0.8rem;
+    padding: 2.25rem;
+}
+.text-content h1 {
+    font-family: var(--font-family-manrope);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--color-dark-greyish-blue);
+}
+.text-content p {
+    font-family: var(--font-family-manrope);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--color-desaturated-dark-blue);
+    line-height: 1.3rem;
+}
+figure {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+figure img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+figcaption {
+    display: flex;
+    flex-direction: column;
+}
+figcaption span {
+    font-family: var(--font-family-manrope);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--color-dark-greyish-blue);
+}
+figcaption p {
+    font-family: var(--font-family-manrope);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--color-light-greyish-blue);
+}
+.share-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9%;
+    height: 75%;
+    border-radius: 50%;
+    background-color: var(--color-light-greyish-blue);
+    margin-left: auto;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.share-button:hover {
+    background-color: var(--color-desaturated-dark-blue);
+    transition: 0.5s all;
+}
+.share-button:hover path {
+    fill: #fff;
+    transition: 0.5s all;
+}
+.hidden-share-container {
+    display: none;
 }

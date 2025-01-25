@@ -23,14 +23,13 @@ body {
 }
 main {
     display: flex;
-    width: 53%;
+    width: 725px;
     height: 34%;
     background-color: #fff;
+    border-radius: 12px;
 }
 .back-image {
-    width: 37.5%;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+    width: 39%;
     background-image: url(./images/drawers.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,6 +40,7 @@ main {
     width: 60%;
     gap: 0.8rem;
     padding: 2.25rem;
+    position: relative;
 }
 .text-content h1 {
     font-family: var(--font-family-manrope);
@@ -62,6 +62,7 @@ figure {
     height: 20%;
     gap: 1rem;
     margin-top: 0.5rem;
+    position: relative;
 }
 figure img {
     width: 40px;
@@ -89,7 +90,7 @@ figcaption p {
     justify-content: center;
     align-items: center;
     width: 9%;
-    height: 75%;
+    height: 80%;
     border-radius: 50%;
     background-color: var(--color-light-greyish-blue);
     margin-left: auto;
@@ -106,5 +107,85 @@ figcaption p {
     transition: 0.5s all;
 }
 .hidden-share-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 230px;
+    height: 50px;
+    border-radius: 7px;
+    bottom: 43%;
+    left: 63vw;
+    background-color: var(--color-dark-greyish-blue);
+    padding: 1rem 2rem;
+}
+.hidden-share-container::after {
+    content: "";
+    bottom: -15%;
+    left: 50%;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    z-index: 0;
+    background-color: var(--color-dark-greyish-blue);
+}
+.hidden-share-container p {
+    font-size: 12px;
+    font-family: var(--font-family-manrope);
+    letter-spacing: 4px;
+    color: var(--color-greyish-blue);
+}
+.hidden-share-container img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.hidden {
     display: none;
 }
+.flex {
+    display: flex;
+}
+
+@media screen and (max-width: 825px) {
+    main {
+        width: 320px;
+        height: 63%;
+        flex-direction: column;
+    }
+    .back-image {
+        width: 100%;
+        height: 42%;
+    }
+    .text-content {
+        width: 100%;
+        height: 50%;
+    }
+    .text-content h1 {
+        font-size: 0.95rem;
+    }
+    figure {
+        display: flex;
+    }
+    figure .share-button {
+        width: 30px;
+    }
+    .hidden-share-container {
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        height: 13%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        position: static;
+    }
+    .hidden-share-container .share-button {
+        width: 30px;
+        height: 30px;
+    }
+    .hidden-share-container::after {
+        display: none;
+    }
+
+}
+
